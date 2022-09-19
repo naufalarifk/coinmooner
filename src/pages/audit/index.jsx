@@ -181,7 +181,7 @@ const TokenAudit = () => {
           <p className="text-[#A7AEBF] font-bold text-center text-2xl mt-6">
             This page is a listing of all audits conducted by CoinMooner
           </p>
-          <div className="grid grid-cols-3 gap-6 mt-16">
+          <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-6 mt-16">
             {auditListArray.map((item) => (
               <div className="bg-[#282B35] rounded-lg p-4 space-y-2 flex flex-col justify-between">
                 <div className="flex flex-row justify-between">
