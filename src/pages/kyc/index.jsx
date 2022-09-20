@@ -94,7 +94,7 @@ const Kyc = () => {
   return (
     <div className="container px-8 md:px-24">
       <button
-        className="bg-[#A668A6] p-2 rounded-lg mt-2"
+        className="bg-[#4c3cce] p-2 rounded-lg mt-2"
         onClick={() => navigate(-1)}
       >
         <p className="font-bold text-white">Go Back</p>
@@ -116,7 +116,7 @@ const Kyc = () => {
               <div className="bg-[#282B35] rounded-lg p-4 space-y-2 flex flex-col justify-between">
                 <div className="flex flex-row justify-between">
                   <div className="font-semibold text-xl">
-                    <h1 className="text-[#A668A6]">{item.type}</h1>
+                    <h1 className="text-[#4c3cce]">{item.type}</h1>
                     <h1 className="text-white">{item.name}</h1>
                   </div>
                   <img src={item.src} className="h-[72px] w-[72px]" alt="" />
@@ -124,8 +124,8 @@ const Kyc = () => {
                 <h2 className="text-[#A7AEBF] font-semibold text-lg">
                   {item.audit}
                 </h2>
-                <div className="bg-[#A668A6] rounded-lg p-3">
-                  <p className="font-semibold text-center text-xl">
+                <div className="bg-[#4c3cce] rounded-lg p-3">
+                  <p className="font-semibold text-center text-xl text-white">
                     Read Complete Report
                   </p>
                 </div>
