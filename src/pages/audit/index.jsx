@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FiInfo } from "react-icons/fi";
 const TokenAudit = () => {
   const navigate = useNavigate();
   const whyUsArray = [
@@ -127,12 +128,12 @@ const TokenAudit = () => {
   return (
     <div className="container px-8 md:px-24">
       <button
-        className="bg-[rgb(245,194,73)] p-2 rounded-lg mt-2"
+        className="bg-[#A668A6] p-2 rounded-lg mt-2"
         onClick={() => navigate(-1)}
       >
-        <p className="bg-[#F5C249] font-bold text-white">Go Back</p>
+        <p className=" font-bold text-white">Go Back</p>
       </button>
-      <div className="flex flex-col gap-y-20">
+      <div className="flex flex-col gap-y-20 mt-2">
         <section className="mx-auto items-center space-y-3 flex flex-row w-full lg:w-[80%]">
           <img
             src={require("../../common/assets/images/manpose-5.png")}
@@ -186,15 +187,32 @@ const TokenAudit = () => {
               <div className="bg-[#282B35] rounded-lg p-4 space-y-2 flex flex-col justify-between">
                 <div className="flex flex-row justify-between">
                   <div className="font-semibold text-xl">
-                  <h1 className="text-[#F5C249]">{item.type}</h1>
-                  <h1 className="text-white">{item.name}</h1>
+                    <h1 className="text-[#A668A6]">{item.type}</h1>
+                    <h1 className="text-white">{item.name}</h1>
                   </div>
                   <img src={item.src} className="h-[72px] w-[72px]" alt="" />
                 </div>
-                <h2 className="text-[#A7AEBF] font-semibold text-lg">{item.audit}</h2>
-                <div className="bg-[#F5C249] rounded-lg p-3"><p className="font-semibold text-center text-xl">Read Complete Report</p></div>
+                <h2 className="text-[#A7AEBF] font-semibold text-lg">
+                  {item.audit}
+                </h2>
+                <div className="bg-[#A668A6] rounded-lg p-3">
+                  <p className="font-semibold text-center text-xl">
+                    Read Complete Report
+                  </p>
+                </div>
               </div>
             ))}
+          </div>
+        </section>
+        <section className="relative bg-[#A668A6] rounded-lg w-[80vw] md:w-[40vw] h-[180px] md:h-[125px]">
+          <div className="p-4 bg-[#282B35] absolute rounded-lg left-2 top-0 w-[80vw] h-[180px] md:w-[40vw] md:h-[125px]">
+            <div className="flex flex-row items-baseline gap-1 text-white font-semibold text-base">
+              <FiInfo />
+              <h1>Disclaimer</h1>
+            </div>
+            <p className="text-[#A7AEBF] text-xs">- An audit does not guarantee safety. <br />
+            IF YOU DECIDE TO RELY ON A CoinMooner AUDIT, YOU DO SO AT YOUR OWN RISK. WE WILL NOT BE HELD LIABLE FOR ANY LOSSES INCURRED BY YOU AS A RESULT OF YOUR INVESTMENT AND HEREBY EXPRESSLY WAIVE ALL LIABILITIES THAT MIGHT ARISE FROM YOUR USE OR REFERENCE OF THE AUDIT.
+            </p>
           </div>
         </section>
       </div>
